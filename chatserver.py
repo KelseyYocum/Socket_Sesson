@@ -79,7 +79,7 @@ class Server:
                 # Only send a message if the user has "logged in" (we have a username)
                 if c.screenname:
                     if fromuser:
-                        c.send("::".join([fromuser, data]) + "\n")
+                        c.send("["+fromuser+"] "+data+ "\n")
                     else:
                         c.send(data + "\n")
             elif c == sys.stdin:
